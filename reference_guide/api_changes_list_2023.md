@@ -82,6 +82,9 @@ NOTE: Entries not starting with code quotes (`name`) can be added to document no
 Specify `displayName`/`key` for `Configurable`
 : To improve performance, provide either attribute for `com.intellij.applicationConfigurable` or `com.intellij.projectConfigurable` extension point (see [](settings_guide.md)).
 
+`com.intellij.remote.RemoteProcess.setWindowSize(int columns, int rows)` abstract method added.
+: Should implement this method.
+
 ### Database Plugin 2023.2
 
 `com.intellij.database.dataSource.DataSourceStorageCore` class removed
@@ -132,7 +135,7 @@ Apache Batik library unbundled
 `com.intellij.openapi.fileEditor.impl.HTMLEditorProvider.Companion.getAFFINITY_KEY()` method removed
 : It was an accidentally exposed internal API. Please use `HTMLEditorProvider.openEditor()` methods, or implement your own file editor provider.
 
-`com.intellij.execution.RunnerAndConfigurationSettings.setFocusToolWindowBeforeRun(boolean)` abstract method added
+`com.intellij.execution.RunnerAndConfigurationSettings.setFocusToolWindowBeforeRun(boolean)` abstract method added.
 : The interface is not intended to be implemented in external plugins.
 
 `com.intellij.execution.RunnerAndConfigurationSettings.getFocusToolWindowBeforeRun()` abstract method added
